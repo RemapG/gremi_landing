@@ -3628,6 +3628,7 @@ a {
 }
 
 /* Ensure Leaflet zoom buttons look dark & premium */
+/* Ensure Leaflet zoom buttons look dark & premium */
 .leaflet-bar {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
@@ -3665,4 +3666,70 @@ a {
 .leaflet-popup-close-button {
     color: #ffffff !important;
     padding: 8px 12px 0 0 !important;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT & LAYOUT ALIGNMENT FIXES (SMARTPHONES)
+   ========================================================================== */
+
+/* Force main header to pin perfectly to top of screen on all mobile devices */
+@media screen and (max-width: 960px) {
+    .main-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+    }
+}
+
+/* Perfect centering and responsive card layouts for mobile contacts block */
+@media screen and (max-width: 768px) {
+    .contacts-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 32px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        margin: 0 auto !important;
+    }
+
+    .contacts-section .contact-form-card,
+    .contacts-section .contact-details-block {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 24px !important; /* Enforces 24px padding instead of desktop 48px to save screen space */
+        box-sizing: border-box !important;
+        transform: none !important;
+        align-self: center !important;
+    }
+
+    .contact-info-item {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .contact-info-item a {
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        display: block !important;
+        max-width: 100% !important;
+        line-height: 1.4 !important;
+    }
+
+    .contact-info-list {
+        width: 100% !important;
+        align-items: center !important;
+    }
+
+    .map-mockup-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
