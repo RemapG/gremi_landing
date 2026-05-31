@@ -238,9 +238,9 @@ const GREMI_CONFIG = {
         ],
         // Настройки видеоплеера в блоке «О нас»
         video: {
-            songTitle: "Выступление нашего ученика",
-            songSubtitle: "Соло на барабанах от ученика школы ГРЕМИ",
-            thumbnailUrl: "assets/images/hero_instrument_banner.png", // Ваша картинка-обложка плеера
+            songTitle: "Foo Fighters — This Is A Call",
+            songSubtitle: "Гитарный кавер от ученицы Ангелины",
+            thumbnailUrl: "assets/images/uchen_preview.jpg", // Ваша картинка-обложка плеера
             
             // ССЫЛКА НА РЕАЛЬНОЕ ВИДЕО:
             // Если вы используете YouTube, вставьте URL встраивания (embed URL).
