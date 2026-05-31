@@ -3731,33 +3731,40 @@ a {
         font-size: 13px !important;
     }
 
-    /* --- PREMIUM BOTTOM NAVIGATION FOR SMARTPHONES --- */
+    /* --- COHESIVE iOS SAFE-AREA TOP NAVIGATION --- */
     :root {
         --header-height: 56px !important; /* Slimmer header on mobile to fit notch and save screen height */
     }
 
     .main-header {
         position: fixed !important;
-        top: auto !important;
-        bottom: 0 !important; /* Pinned perfectly at the bottom! */
+        top: 0 !important; /* Pinned perfectly at the top! */
+        bottom: auto !important;
         left: 0 !important;
         width: 100% !important;
-        height: calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) !important;
-        padding-bottom: env(safe-area-inset-bottom, 0px) !important;
-        border-bottom: none !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-        background-color: rgba(8, 8, 10, 0.92) !important; /* Dark solid premium bar */
+        /* Height includes safe area top inset for notch/status bar devices */
+        height: calc(var(--header-height) + env(safe-area-inset-top, 0px)) !important;
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        padding-bottom: 0 !important;
+        border-top: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+        background-color: rgba(8, 8, 10, 0.85) !important; /* Elegant ultra-transparent dark glass */
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
         z-index: 9999 !important;
     }
 
     .main-header.scrolled {
-        height: calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) !important;
-        background-color: rgba(8, 8, 10, 0.96) !important;
+        height: calc(var(--header-height) + env(safe-area-inset-top, 0px)) !important;
+        background-color: rgba(8, 8, 10, 0.92) !important;
     }
 
     .header-container {
-        height: 100% !important;
+        height: var(--header-height) !important; /* Container matches core header height */
         padding: 0 12px !important; /* Less side spacing so button doesn't overflow */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
     }
 
     /* Scale down logo and elements to fit smartphone width perfectly */
@@ -3801,12 +3808,13 @@ a {
         height: 2px !important;
     }
 
-    /* Shift the mobile menu drawer to open from the bottom */
+    /* Shift the mobile menu drawer to open from the top under the header */
     .mobile-drawer {
         top: 0 !important;
-        bottom: calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) !important;
-        height: calc(100vh - var(--header-height) - env(safe-area-inset-bottom, 0px)) !important;
-        padding: 40px 24px !important;
+        bottom: auto !important;
+        height: 100vh !important;
+        padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 24px) !important;
+        padding-bottom: 32px !important;
         right: -100% !important;
         left: auto !important;
     }
@@ -3817,7 +3825,7 @@ a {
 
     /* --- HERO MOBILE COMPACTNESS & WHITE SPACE REDUCTION --- */
     .hero-section {
-        padding-top: 32px !important; /* Beautiful space at the top since header is now at the bottom! */
+        padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 24px) !important; /* Beautiful space under header */
         padding-bottom: 60px !important;
     }
 
