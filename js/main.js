@@ -1042,4 +1042,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* ==========================================
+       10. INPUT PHONE MASK (force standard format +7 (999) 999-99-99)
+       ========================================== */
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            // If the first digit is 7 or 8, remove it so we can format the rest
+            if (value.startsWith('8')) {
+                value = value.substring(1);
+            } else if (value.startsWith('7')) {
+                value = value.substring(1);
+            }
+            
+            // Limit to 10 digits
+            value = value.substring(0, 10);
+            
+            let formatted = '+7 ';
+            if (value.length > 0) {
+                formatted += '(' + value.substring(0, 3);
+            }
+            if (value.length >= 3) {
+                formatted += ') ';
+            }
+            if (value.length > 3) {
+                formatted += value.substring(3, 6);
+            }
+            if (value.length >= 6) {
+                formatted += '-';
+            }
+            if (value.length > 6) {
+                formatted += value.substring(6, 8);
+            }
+            if (value.length >= 8) {
+                formatted += '-';
+            }
+            if (value.length > 8) {
+                formatted += value.substring(8, 10);
+            }
+            
+            e.target.value = value.length === 0 ? '' : formatted;
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && e.target.value.length <= 4) {
+                e.target.value = '';
+            }
+        });
+    });
+
 });
