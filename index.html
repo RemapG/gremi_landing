@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальная школа ГРЕМИ в Кемерове | Обучение вокалу, гитаре, барабанам, пианино</title>
+    <meta name="description" content="Музыкальная школа ГРЕМИ в Кемерово — индивидуальное обучение вокалу, гитаре, барабанам, фортепиано и сольфеджио для взрослых и детей от 7 лет. Запишитесь на бесплатный пробный урок!">
+    <meta name="keywords" content="музыкальная школа кемерово, обучение вокалу кемерово, уроки гитары кемерово, школа барабанов кемерово, пианино кемерово, вокал кемерово, уроки музыки кемерово, греми кемерово">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gremischool.ru">
+    <meta property="og:title" content="Музыкальная школа ГРЕМИ">
+    <meta property="og:description" content="Индивидуальный подход к каждому. Вокал, гитара, барабаны, фортепиано. Запишись на бесплатный пробный урок!">
+    <meta property="og:image" content="assets/images/hero_instrument_banner.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Unbounded:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=4.9">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo.png?v=4.9" type="image/png">
+
+    <!-- Schema.org JSON-LD LocalBusiness Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicSchool",
+      "name": "Музыкальная школа ГРЕМИ",
+      "image": "https://gremischool.ru/assets/images/logo.png",
+      "url": "https://gremischool.ru",
+      "telephone": "+79069235757",
+      "email": "gremischool@yandex.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Карболитовская, д. 1/3, 1 этаж",
+        "addressLocality": "Кемерово",
+        "postalCode": "650000",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.363278,
+        "longitude": 86.057032
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://t.me/gremi_admin"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- BACKGROUND ANIMATED DECORATION -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    
+    <!-- BACKGROUND EDITORIAL GRID LINES -->
+    <div class="editorial-grid-lines">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+    
+    
+    <!-- HEADER -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png?v=4.9" alt="Музыкальная школа ГРЕМИ" class="logo-img">
+                <span class="logo-text">ГР<span class="logo-e"><span></span><span></span><span></span></span>МИ</span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="desktop-nav">
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#courses" class="nav-link">Курсы</a>
+                <a href="#teachers" class="nav-link">Преподаватели</a>
+                <a href="#pricing" class="nav-link">Стоимость</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="tel:+79069235757" class="header-phone">+7 (906) 923-57-57</a>
+                <button class="btn btn-primary btn-nav open-booking-modal" data-subject="Общая заявка">Записаться</button>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Открыть меню">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <nav class="mobile-nav">
+            <a href="#about" class="mobile-nav-link">О нас</a>
+            <a href="#courses" class="mobile-nav-link">Курсы</a>
+            <a href="#teachers" class="mobile-nav-link">Преподаватели</a>
+            <a href="#pricing" class="mobile-nav-link">Стоимость</a>
+            <a href="#reviews" class="mobile-nav-link">Отзывы</a>
+            <a href="#contacts" class="mobile-nav-link">Контакты</a>
+            <div class="mobile-contact-info">
+                <a href="tel:+79069235757" class="mobile-phone">+7 (906) 923-57-57</a>
+                <a href="mailto:gremischool@yandex.ru" class="mobile-email">gremischool@yandex.ru</a>
+                <button class="btn btn-primary open-booking-modal" data-subject="Заявка из мобильного меню">Записаться на урок</button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <!-- Video Background -->
+            <div class="hero-video-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/video/Обший.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Concentric Sound Orbit Background Art -->
+            <div class="sound-orbit-deco">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="orbit orbit-4"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">⚡ Твой музыкальный старт</span>
+                    <h1 class="hero-title">Учим играть и петь то, что любишь ты</h1>
+                    <p class="hero-subtitle">В «Греми» мы не ставим оценок и не заставляем зубрить скучную классику. Только живая практика, любимые песни и реальный кайф от процесса. Пройди быстрый тест и забери первое занятие бесплатно!</p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-glow" id="start-quiz-btn">
+                            <span>Пройти тест на слух за 1 мин</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <a href="#courses" class="btn btn-secondary">Наши направления</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">направлений обучения</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">топ преподавателей</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2019</span>
+                            <span class="stat-label">год основания школы</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-bottom-ribbon">
+                <div class="container hero-social-buttons">
+                    <a href="https://t.me/gremi_admin" target="_blank" class="hero-social-btn tg-btn">
+                        <span class="btn-text">Написать в Telegram</span>
+                    </a>
+                    <a href="https://max.ru/u/f9LHodD0cOLoRX5Eji7cazIaZZUUZuiutA12pD9p3_N9BEqxS-WW1VFkY68" target="_blank" class="hero-social-btn max-btn">
+                        <span class="btn-text">Написать в MAX</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIRECTIONS / COURSES SECTION -->
+        <section class="courses-section laser-border-top cyber-grid-crosses" id="courses">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Чему мы учим</span>
+                    <h2 class="section-title">Направления обучения</h2>
+                    <p class="section-descr">Никаких скучных гамм и пыльных учебников. Выбирай то, от чего горят глаза, и сыграй свой первый трек уже на пробном уроке.</p>
+                </div>
+                
+                <div class="courses-grid reveal reveal-stagger">
+                    <!-- VOCAL -->
+                    <div class="course-card open-booking-modal" data-subject="Обучение Вокалу">
+                        <div class="card-bg-gradient"></div>
+                        <div class="course-icon">🎙️</div>
+                        <h3 class="course-title">Вокал</h3>
+                        <p class="course-text">Поставим дыхание, снимем зажимы и научим петь любимые треки — от нежного соула до драйвового рока или экстрим-вокала. Спой так, чтобы побежали мурашки.</p>
+                        <span class="course-link">
+                            Записаться 
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                    
+                    <!-- DRUMS -->
+                    <div class="course-card open-booking-modal" data-subject="Обучение Барабанам">
+                        <div class="card-bg-gradient"></div>
+                        <div class="course-icon">🥁</div>
+                        <h3 class="course-title">Барабаны</h3>
+                        <p class="course-text">Выплесни адреналин и поймай ритм. Сядешь за реальную установку на первом же уроке. Разберем твои любимые биты и сыграем их вместе.</p>
+                        <span class="course-link">
+                            Записаться 
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                    
+                    <!-- GUITAR -->
+                    <div class="course-card open-booking-modal" data-subject="Обучение Гикаре">
+                        <div class="card-bg-gradient"></div>
+                        <div class="course-icon">🎸</div>
+                        <h3 class="course-title">Гитара</h3>
+                        <p class="course-text">Акустика, электро- или сочный бас. Забудь про нудные упражнения: учим сразу на тех песнях, которые играют прямо сейчас в твоем плейлисте.</p>
+                        <span class="course-link">
+                            Записаться 
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                    
+                    <!-- PIANO -->
+                    <div class="course-card open-booking-modal" data-subject="Обучение Клавишным">
+                        <div class="card-bg-gradient"></div>
+                        <div class="course-icon">🎹</div>
+                        <h3 class="course-title">Фортепиано</h3>
+                        <p class="course-text">От саундтреков к любимым фильмам до сочных джазовых каверов. Научим подбирать музыку на слух, импровизировать и кайфовать от игры.</p>
+                        <span class="course-link">
+                            Записаться 
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                    
+                    <!-- SOLFEGGIO -->
+                    <div class="course-card open-booking-modal" data-subject="Обучение Сольфеджио">
+                        <div class="card-bg-gradient"></div>
+                        <div class="course-icon">🎼</div>
+                        <h3 class="course-title">Сольфеджио</h3>
+                        <p class="course-text">Для тех, кто хочет сочинять свое или понимать музыку глубже. Никакой зубрёжки: объясняем законы гармонии, аккорды и ритм простыми словами.</p>
+                        <span class="course-link">
+                            Записаться 
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEACHERS SECTION -->
+        <section class="teachers-section laser-border-top" id="teachers">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Мастера своего дела</span>
+                    <h2 class="section-title">Наши преподаватели</h2>
+                    <p class="section-descr">Все наставники — практикующие концертные музыканты. Они не просто учат играть по нотам, а передают реальный сценический опыт.</p>
+                </div>
+                
+                <!-- Filter tabs -->
+                <div class="teachers-tabs reveal">
+                    <button class="tab-btn active" data-filter="all">Все</button>
+                    <button class="tab-btn" data-filter="vocal">Вокал</button>
+                    <button class="tab-btn" data-filter="guitar">Гитара</button>
+                    <button class="tab-btn" data-filter="piano">Клавишные / Сольфеджио</button>
+                </div>
+                
+                <!-- Teachers Grid -->
+                <div class="teachers-grid reveal reveal-stagger" id="teachers-grid">
+                    
+                    <!-- Alice Egorova (Vocal) -->
+                    <div class="teacher-card" data-category="vocal">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-vocal">🎙️</div>
+                            <span class="teacher-experience-badge">20 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Алиса Егорова</h3>
+                            <span class="teacher-role">Вокал (эстрадный, джаз, рок)</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 7 лет</span>
+                                <span>Возраст учеников: от 15 лет</span>
+                            </div>
+                            <p class="teacher-desc">Строит занятия индивидуально: с закрытыми учениками работает через доверительный диалог, с открытыми — через движение и крик. Главные акценты — музыкальность и свобода самовыражения.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Джаз, Соул, Рок</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Алисе Егоровой">Записаться к Алисе</button>
+                        </div>
+                    </div>
+
+                    <!-- Natalya Ivanova (Vocal) -->
+                    <div class="teacher-card" data-category="vocal">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-vocal">⚡</div>
+                            <span class="teacher-experience-badge">15 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Наталья Иванова</h3>
+                            <span class="teacher-role">Вокал (эстрадный, рок, экстрим)</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 7 лет</span>
+                                <span>Возраст учеников: от 7 лет</span>
+                            </div>
+                            <p class="teacher-desc">Обладает колоссальным опытом выступлений. Уделяет особое внимание ощущениям голосового аппарата, помогая раскрыть полный природный потенциал голоса без перегрузок.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Рок, Метал, Альтернатива</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Наталье Ивановой">Записаться к Наталье</button>
+                        </div>
+                    </div>
+
+                    <!-- Pavel Fedotov (Guitar) -->
+                    <div class="teacher-card" data-category="guitar">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-guitar">🎸</div>
+                            <span class="teacher-experience-badge">20 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Павел Федотов</h3>
+                            <span class="teacher-role">Акустическая гитара, Электрогитара</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 15 лет</span>
+                                <span>Возраст учеников: от 7 лет</span>
+                            </div>
+                            <p class="teacher-desc">Объясняет сложный материал просто и исключительно по делу. Помогает как новичкам быстро освоить базовые аккорды, так и продвинутым гитаристам овладеть сложной техникой соло.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Джаз, Фанк, Поп, Импровизация</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Павлу Федотову">Записаться к Павлу</button>
+                        </div>
+                    </div>
+
+                    <!-- Ivan Kuleshov (Guitar) -->
+                    <div class="teacher-card" data-category="guitar">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-guitar">🎶</div>
+                            <span class="teacher-experience-badge">17 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Иван Кулешов</h3>
+                            <span class="teacher-role">Гитара (акустическая, электро)</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 2 года</span>
+                                <span>Возраст учеников: от 12 лет</span>
+                            </div>
+                            <p class="teacher-desc">Ставит во главу обучения удовольствие от игры и живой интерес к музыке. На занятиях царит легкая, поддерживающая атмосфера без скуки, но с четким фокусом на результат.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Рок, Поп, Хип-хоп</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Ивану Кулешову">Записаться к Ивану</button>
+                        </div>
+                    </div>
+
+                    <!-- Ekaterina Anikina (Guitar) -->
+                    <div class="teacher-card" data-category="guitar">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-guitar">🎵</div>
+                            <span class="teacher-experience-badge">10 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Екатерина Аникина</h3>
+                            <span class="teacher-role">Гитара (акустическая, электро)</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 2 года</span>
+                                <span>Возраст учеников: от 15 лет</span>
+                            </div>
+                            <p class="teacher-desc">Учит не просто зажимать лады, а понимать музыку — ритм, гармонию, учит импровизировать. Передает опыт работы на сцене и дает практические советы по концертам и звукозаписи.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Поп, Легкий рок, Акустика</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Екатерине Аникиной">Записаться к Екатерине</button>
+                        </div>
+                    </div>
+
+                    <!-- Ilya Kaktursky (Piano) -->
+                    <div class="teacher-card" data-category="piano">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-piano">🎹</div>
+                            <span class="teacher-experience-badge">18 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Илья Кактурский</h3>
+                            <span class="teacher-role">Фортепиано, Клавишные</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 12 лет</span>
+                                <span>Возраст учеников: от 7 лет</span>
+                            </div>
+                            <p class="teacher-desc">Простые и понятные занятия фортепиано с акцентом на доступность материала и личный прогресс каждого студента. Игра по нотам, исполнение классики, разбор любимых песен.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Классика, Поп, Саундтреки</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Илье Кактурскому">Записаться к Илье</button>
+                        </div>
+                    </div>
+
+                    <!-- Alexander Frolov (Piano) -->
+                    <div class="teacher-card" data-category="piano">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-piano">🎼</div>
+                            <span class="teacher-experience-badge">20 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Александр Фролов</h3>
+                            <span class="teacher-role">Эстрадное фортепиано, Сольфеджио</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 7 лет</span>
+                                <span>Возраст учеников: от 8 лет</span>
+                            </div>
+                            <p class="teacher-desc">Преподает игру на слух, джазовую импровизацию, нотную грамоту. Помогает освоить сонграйтинг, подбор аккомпанемента к вокалу, сольфеджио и игру в ансамбле.</p>
+                            <div class="teacher-pref"><strong>Предпочтения:</strong> Джаз, Классика, Импровизация, Поп</div>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Александру Фролову">Записаться к Александру</button>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- CTA Banner -->
+                <div class="teachers-cta-banner">
+                    <div class="cta-banner-content">
+                        <h3>Запишись на бесплатное пробное занятие к любому наставнику</h3>
+                        <p>Индивидуальная подборка программы, знакомство с инструментом и преподавателем. Без обязательств.</p>
+                    </div>
+                    <button class="btn btn-primary btn-glow open-booking-modal" data-subject="Запись на бесплатное пробное к преподавателю">Записаться на урок</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION WITH VIDEO COVERS -->
+        <section class="about-section laser-border-top cyber-grid-crosses" id="about">
+            <!-- Flowing Acoustic Wave Background Art -->
+            <div class="acoustic-waves-deco pos-about">
+                <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,160 C320,300 640,20 960,280 C1280,140 1440,200 1440,200" fill="none" stroke="rgba(194, 166, 121, 0.08)" stroke-width="2" class="wave-path-1"></path>
+                    <path d="M0,120 C400,20 800,300 1200,80 C1360,20 1440,160 1440,160" fill="none" stroke="rgba(28, 43, 34, 0.04)" stroke-width="1.5" class="wave-path-2"></path>
+                </svg>
+            </div>
+            
+            <div class="container about-container">
+                <div class="about-info-block reveal-left">
+                    <span class="section-subtitle">Кто мы такие</span>
+                    <h2 class="section-title">Греми — это не просто уроки</h2>
+                    <p class="about-p">Мы открыли школу <strong>ГРЕМИ</strong> в 2019 году с простой идеей: музыка должна приносить удовольствие, а не головную боль. Мы против академического давления, скучных лекций и зазубривания гамм. Не важен твой возраст, пол и музыкальное прошлое — научиться играть или петь может абсолютно каждый, если убрать из процесса нуду.</p>
+                    <p class="about-p">Все наши преподаватели — не просто теоретики с дипломами, а практикующие концертные музыканты. Они знают сцену изнутри и делятся живым опытом. Уже через несколько месяцев занятий ты сможешь выйти на сцену перед реальными зрителями на нашем фирменном отчетном концерте или записать свой первый студийный кавер!</p>
+                    
+                    <div class="about-features">
+                        <div class="feat-item">
+                            <span class="feat-icon">🏠</span>
+                            <div>
+                                <h4>Акустический комфорт</h4>
+                                <p>Идеально заглушенные светлые классы с профессиональным звуком и крутой атмосферой.</p>
+                            </div>
+                        </div>
+                        <div class="feat-item">
+                            <span class="feat-icon">🎤</span>
+                            <div>
+                                <h4>Сцена и студия</h4>
+                                <p>Выступления на топовых площадках Москвы и запись твоих песен на профессиональной студии.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-video-block reveal-right">
+                    <div class="player-wrapper">
+                        <div class="player-glow"></div>
+                        <div class="player-container">
+                            <img src="assets/images/hero_instrument_banner.png" alt="Плеер студии" class="player-thumbnail">
+                            <div class="player-overlay">
+                                <button class="play-trigger-btn" id="play-video-btn" aria-label="Воспроизвести кавер">
+                                    <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                                <div class="player-meta">
+                                    <span class="player-song">Whitney Houston — I Will Always Love You</span>
+                                    <span class="player-author">Вокальный кавер от ученицы Алисы Ивановой</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section class="pricing-section" id="pricing">
+            <!-- Flowing Acoustic Wave Background Art -->
+            <div class="acoustic-waves-deco pos-pricing">
+                <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,80 C360,220 720,20 1080,240 C1280,110 1440,150 1440,150" fill="none" stroke="rgba(28, 43, 34, 0.03)" stroke-width="1.5" class="wave-path-1"></path>
+                    <path d="M0,180 C400,60 800,280 1200,120 C1360,40 1440,200 1440,200" fill="none" stroke="rgba(194, 166, 121, 0.06)" stroke-width="2" class="wave-path-2"></path>
+                </svg>
+            </div>
+            
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Цены и абонементы</span>
+                    <h2 class="section-title">Форматы обучения</h2>
+                    <p class="section-descr">Вы не ограничены жесткими рамками курсов — выбирайте комфортное количество занятий и регулируйте скорость своего прогресса сами.</p>
+                </div>
+                
+                <div class="pricing-grid reveal reveal-stagger">
+                    
+                    <!-- Card 1 -->
+                    <div class="price-card">
+                        <div class="price-badge">Развое</div>
+                        <h3 class="price-name">Знакомство</h3>
+                        <div class="price-value">2 200 ₽</div>
+                        <div class="price-lessons">1 Индивидуальное занятие</div>
+                        <p class="price-desc">Пробный индивидуальный урок по любому направлению: вокал, гитара, фортепиано или барабаны. Познакомьтесь с преподавателем и атмосферой школы.</p>
+                        <ul class="price-features">
+                            <li>Все инструменты предоставляются</li>
+                            <li>Длительность: 50 минут</li>
+                            <li>Консультация преподавателя</li>
+                        </ul>
+                        <button class="btn btn-secondary open-booking-modal" data-subject="Абонемент Знакомство (1 занятие - 2200р)">Выбрать формат</button>
+                    </div>
+
+                    <!-- Card 2 (Popular) -->
+                    <div class="price-card popular">
+                        <div class="price-badge-popular">Популярно</div>
+                        <div class="price-badge">Старт</div>
+                        <h3 class="price-name">Легкий старт</h3>
+                        <div class="price-value">7 900 ₽</div>
+                        <div class="price-lessons">4 Индивидуальных занятия</div>
+                        <p class="price-desc">Идеально подходит для тех, кто хочет попробовать себя в музыке, освоить базовые навыки игры или вокала либо освежить свои прежние умения.</p>
+                        <ul class="price-features">
+                            <li>Срок действия абонемента — 30 дней</li>
+                            <li>Возможна заморозка на 30 дней</li>
+                            <li>Индивидуальный график уроков</li>
+                        </ul>
+                        <button class="btn btn-primary btn-glow open-booking-modal" data-subject="Абонемент Легкий старт (4 занятия - 7900р)">Заказать абонемент</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="price-card">
+                        <div class="price-badge">Практика</div>
+                        <h3 class="price-name">Уверенное начало</h3>
+                        <div class="price-value">14 200 ₽</div>
+                        <div class="price-lessons">8 Индивидуальных занятий</div>
+                        <p class="price-desc">Оптимальный выбор для регулярных занятий. 8 индивидуальных уроков по выбранному направлению с глубоким погружением в практику и теорию.</p>
+                        <ul class="price-features">
+                            <li>Срок действия абонемента — 30 дней</li>
+                            <li>Возможна заморозка на 30 дней</li>
+                            <li>Постановка правильной техники</li>
+                        </ul>
+                        <button class="btn btn-secondary open-booking-modal" data-subject="Абонемент Уверенное начало (8 занятий - 14200р)">Заказать абонемент</button>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="price-card">
+                        <div class="price-badge">Прогресс</div>
+                        <h3 class="price-name">Муз Интенсив</h3>
+                        <div class="price-value">18 900 ₽</div>
+                        <div class="price-lessons">12 Индивидуальных занятий</div>
+                        <p class="price-desc">Лучший выбор для тех, кто серьезно настроен на осязаемый результат: быстрый рост навыков игры, уверенный вокал и подготовка к сцене.</p>
+                        <ul class="price-features">
+                            <li>Срок действия абонемента — 60 дней</li>
+                            <li>Возможна заморозка на 30 дней</li>
+                            <li>Подготовка концертного номера</li>
+                        </ul>
+                        <button class="btn btn-secondary open-booking-modal" data-subject="Абонемент Муз Интенсив (12 занятий - 18900р)">Заказать абонемент</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section class="reviews-section laser-border-top" id="reviews">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-subtitle">Отзывы учеников</span>
+                    <h2 class="section-title">Истории успеха наших студентов</h2>
+                    <p class="section-descr">Почитайте, чем делятся люди, проходящие обучение в школе ГРЕМИ. Мы ценим каждого и гордимся их результатами.</p>
+                </div>
+                
+                <div class="reviews-carousel-wrapper reveal-scale">
+                    <div class="reviews-slider" id="reviews-slider">
+                        
+                        <!-- Review 1 -->
+                        <div class="review-slide active">
+                            <div class="review-card-inner">
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">«Занимаюсь у Ивана. Классный педагог, к тому же практик, поэтому дает множество различных техник и действенных советов из своего богатого сценического опыта! Спасибо, ГРЕМИ, за невероятно уютную студию с дружественной атмосферой. Одно удовольствие приходить к вам на уроки!»</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">ЮГ</div>
+                                    <div>
+                                        <h4 class="author-name">Юрий Горбунов</h4>
+                                        <span class="author-details">Обучение фортепиано</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-slide">
+                            <div class="review-card-inner">
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">«Техническое оснащение школы отличное. Преподавательский состав великолепный. Особо отмечу Наталью Иванову (преподаватель по клавишам и сольфеджио). Это большая редкость — встретить преподавателя, который получает колоссальное удовольствие от того, что делает, а именно учит понимать, слушать и слышать музыку абсолютно разных жанров.»</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">ОИ</div>
+                                    <div>
+                                        <h4 class="author-name">Оксана И.</h4>
+                                        <span class="author-details">Фортепиано и сольфеджио</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-slide">
+                            <div class="review-card-inner">
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">«Большое спасибо музыкальной школе и преподавателю Илье Кактурскому за то, что вкладывают всю душу в свою работу. Дочь занимается у Ильи на акустической гитаре с лета 2023 года. Все замечательно, ребёнок в полном восторге и каждое занятие ждёт с огромным нетерпением! Я вижу, что качество её игры стало гораздо выше.»</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">ОЕ</div>
+                                    <div>
+                                        <h4 class="author-name">Оксана Елькина</h4>
+                                        <span class="author-details">Мама ученицы (акустическая гитара)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="review-slide">
+                            <div class="review-card-inner">
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">«Хожу уже полгода к Анастасии, осуществляю наконец детскую мечту! Все безумно нравится: без проблем запишут на нужное время, всегда терпеливо переносят запись, если случается форс-мажор. В студии предложат чай/кофе с шоколадкой 😍 С преподавателем мгновенно нашли контакт, прогресс в голосе ощутимый!»</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">НА</div>
+                                    <div>
+                                        <h4 class="author-name">Нина Алексеева</h4>
+                                        <span class="author-details">Обучение эстрадному вокалу</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="review-slide">
+                            <div class="review-card-inner">
+                                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="review-text">«Замечательное место, где можно учиться пению, игре на инструментах и творчески самореализоваться. В этом помогают очень крутые преподаватели с высоким профессионализмом, искренне любящие своё дело. Ощущение домашней, приятной атмосферы согревает душу при каждом визите.»</p>
+                                <div class="review-author">
+                                    <div class="author-avatar">КЗ</div>
+                                    <div>
+                                        <h4 class="author-name">Кира Зырянова</h4>
+                                        <span class="author-details">Обучение музыке</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-control-btn prev" id="slider-prev" aria-label="Предыдущий отзыв">←</button>
+                        <div class="carousel-dots" id="slider-dots"></div>
+                        <button class="carousel-control-btn next" id="slider-next" aria-label="Следующий отзыв">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section laser-border-top cyber-grid-crosses" id="faq">
+            <div class="container faq-container">
+                <div class="faq-left reveal-left">
+                    <span class="section-subtitle">Простые ответы</span>
+                    <h2 class="section-title">Вопросы и страхи</h2>
+                    <p class="faq-descr-text">Развеем основные сомнения тех, кто только делает первые шаги в музыке. Всё гораздо проще, чем кажется!</p>
+                    <button class="btn btn-primary open-booking-modal" data-subject="Вопрос из FAQ">Спросить напрямую</button>
+                </div>
+                
+                <div class="faq-accordion-wrapper reveal-right">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Как долго нужно заниматься и сколько это стоит?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Все зависит от твоих целей: разобрать одну любимую песню можно за 4 занятия (абонемент «Легкий старт» за 7 900 руб.), а чтобы уверенно импровизировать — лучше заниматься регулярно по 8 или 12 занятий. Длительность каждого индивидуального урока — 50 минут.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Что делать, если я заболею или уеду? Урок сгорит?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Конечно нет! Мы ценим твое время и деньги. Если планы поменялись, просто предупреди администратора за 24 часа. Мы без лишних вопросов перенесем занятие на другой удобный день, а срок абонемента можно заморозить на 30 дней.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>У вас только скучные уроки один на один?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ни в коем случае! Греми — это живое тусовочное комьюнити. Мы регулярно организуем мощные отчетные концерты на клубных сценах, устраиваем мастер-классы и помогаем записать твое исполнение на профессиональной студии звукозаписи.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Дома нет ни гитары, ни клавиш. Как начать?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Начать можно прямо сейчас вообще без инструмента. На каждом уроке в студии мы бесплатно даем топовые гитары, барабаны или клавишные. А когда ты поймешь, что готов заниматься дома, преподаватель лично поможет подобрать отличный инструмент под твой бюджет.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTS & FOOTER SECTION -->
+        <section class="contacts-section laser-border-top" id="contacts">
+            <div class="container contacts-container">
+                
+                <!-- Contact Form Card -->
+                <div class="contact-form-card reveal-left">
+                    <h3>Запишись на пробный урок!</h3>
+                    <p>Заполни форму ниже, и администратор школы свяжется с тобой в течение 30 минут, чтобы подобрать удобное время.</p>
+                    
+                    <form id="footer-contact-form" class="grem-form">
+                        <input type="hidden" name="form_subject" value="Заявка из подвала сайта">
+                        
+                        <div class="form-group">
+                            <label for="footer-name">Ваше имя</label>
+                            <input type="text" id="footer-name" name="name" placeholder="Как к вам обращаться?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="footer-phone">Номер телефона</label>
+                            <input type="tel" id="footer-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="footer-direction">Направление обучения</label>
+                            <select id="footer-direction" name="direction">
+                                <option value="Не выбрано">Помочь определиться</option>
+                                <option value="Вокал">Вокал</option>
+                                <option value="Барабаны">Барабаны</option>
+                                <option value="Гитара">Гитара</option>
+                                <option value="Фортепиано">Фортепиано</option>
+                                <option value="Сольфеджио">Сольфеджио</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block btn-glow">Отправить заявку</button>
+                        <p class="form-disclaimer">Нажимая кнопку, вы соглашаетесь с нашей <a href="#" class="open-privacy">политикой конфиденциальности</a>.</p>
+                    </form>
+                </div>
+                
+                <!-- Contact Details Card -->
+                <div class="contact-form-card contact-details-block reveal-right">
+                    <span class="section-subtitle">Свяжитесь с нами</span>
+                    <h2>Контакты и школа</h2>
+                    <p class="contacts-intro">Вы всегда можете прийти в гости, написать нам в чат или позвонить. Мы работаем ежедневно с 10:00 до 22:00.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <h4>Телефон</h4>
+                                <a href="tel:+79069235757">+7 (906) 923-57-57</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:gremischool@yandex.ru">gremischool@yandex.ru</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <h4>Адрес</h4>
+                                <a href="https://go.2gis.com/2iZok" target="_blank">г. Кемерово, ул. Карболитовская, д. 1/3, 1 этаж (Заводский район)</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="info-icon">💬</span>
+                            <div>
+                                <h4>Мессенджеры</h4>
+                                <div class="social-links">
+                                    <a href="https://t.me/gremi_admin" target="_blank" class="social-link tg">Telegram</a>
+                                    <a href="https://max.ru/u/f9LHodD0cOLoRX5Eji7cazIaZZUUZuiutA12pD9p3_N9BEqxS-WW1VFkY68" target="_blank" class="social-link max">MAX</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive 2GIS Map -->
+                    <div class="map-mockup-wrapper">
+                        <div id="interactive-map" class="map-canvas"></div>
+                        <a href="https://go.2gis.com/2iZok" target="_blank" class="map-open-2gis-btn">
+                            <span>Открыть в 2ГИС</span>
+                            <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" style="display: inline-block; vertical-align: middle;">
+                                <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- FOOTER COPYRIGHT -->
+            <div class="footer-copyright-bar">
+                <div class="container copyright-container">
+                    <span>&copy; 2019-2026 Музыкальная школа ГРЕМИ. Все права защищены.</span>
+                    <div class="footer-links">
+                        <a href="#" class="open-privacy">Политика конфиденциальности</a>
+                        <a href="#">Договор оферты</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- INTERACTIVE QUIZ MODAL -->
+    <div class="modal-overlay" id="quiz-modal">
+        <div class="modal-card quiz-card">
+            <button class="modal-close-btn quiz-close" aria-label="Закрыть квиз">&times;</button>
+            
+            <div class="quiz-progress-bar">
+                <div class="progress-indicator" id="quiz-progress"></div>
+            </div>
+            
+            <!-- Step 1: Instrument -->
+            <div class="quiz-step active" data-step="1">
+                <h3 class="quiz-step-title">Шаг 1 из 3: Какое направление обучения вас больше всего интересует?</h3>
+                <div class="quiz-options grid-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_instrument" value="Вокал" checked>
+                        <span class="option-card">
+                            <span class="option-icon">🎙️</span>
+                            <span class="option-title">Вокал</span>
+                            <span class="option-text">Постановка голоса, дыхания и сценическая раскрепощенность</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_instrument" value="Барабаны">
+                        <span class="option-card">
+                            <span class="option-icon">🥁</span>
+                            <span class="option-title">Барабаны</span>
+                            <span class="option-text">Развитие чувства ритма, драйв и игра любимых битов</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_instrument" value="Гитара">
+                        <span class="option-card">
+                            <span class="option-icon">🎸</span>
+                            <span class="option-title">Гитара</span>
+                            <span class="option-text">Электрогитара, акустика или бас-гитара без скучной теории</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_instrument" value="Фортепиано">
+                        <span class="option-card">
+                            <span class="option-icon">🎹</span>
+                            <span class="option-title">Фортепиано</span>
+                            <span class="option-text">Классические пьесы, красивые каверы и импровизация</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="quiz-nav">
+                    <span></span>
+                    <button class="btn btn-primary quiz-next-btn">Далее &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Level -->
+            <div class="quiz-step" data-step="2">
+                <h3 class="quiz-step-title">Шаг 2 из 3: Какой у вас текущий уровень подготовки?</h3>
+                <div class="quiz-options list-options">
+                    <label class="quiz-option-list">
+                        <input type="radio" name="quiz_level" value="Абсолютный новичок" checked>
+                        <span class="list-option-card">
+                            <span class="list-option-title">Абсолютный новичок</span>
+                            <span class="list-option-text">Ни разу не держал инструмент/не пел, хочу начать с нуля</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option-list">
+                        <input type="radio" name="quiz_level" value="Немного умею">
+                        <span class="list-option-card">
+                            <span class="list-option-title">Немного умею играть/петь</span>
+                            <span class="list-option-text">Знаю базу, играю несколько простых песен, хочу большего</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option-list">
+                        <input type="radio" name="quiz_level" value="Опытный любитель">
+                        <span class="list-option-card">
+                            <span class="list-option-title">Опытный исполнитель</span>
+                            <span class="list-option-text">Давно занимаюсь, хочу прокачать технику, выступать и записываться</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary quiz-prev-btn">&larr; Назад</button>
+                    <button class="btn btn-primary quiz-next-btn">Далее &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Goal & Contacts -->
+            <div class="quiz-step" data-step="3">
+                <h3 class="quiz-step-title">Шаг 3 из 3: Какая у вас главная музыкальная цель?</h3>
+                <div class="quiz-options grid-options cols-3">
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_goal" value="Играть для себя" checked>
+                        <span class="option-card compact">
+                            <span class="option-icon">🏡</span>
+                            <span class="option-title">Играть для души</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_goal" value="Выступать на сцене">
+                        <span class="option-card compact">
+                            <span class="option-icon">🎤</span>
+                            <span class="option-title">Сцена и концерты</span>
+                        </span>
+                    </label>
+
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz_goal" value="Писать свои песни">
+                        <span class="option-card compact">
+                            <span class="option-icon">✍️</span>
+                            <span class="option-title">Свои песни и запись</span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="quiz-form-block">
+                    <h4>Поздравляем! Вы успешно прошли тест.</h4>
+                    <p>Заполните форму ниже, чтобы забронировать **Бесплатный пробный урок** по выбранному направлению!</p>
+                    
+                    <form id="quiz-contact-form" class="grem-form-row">
+                        <div class="form-group">
+                            <input type="text" id="quiz-name" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="quiz-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary quiz-prev-btn">&larr; Назад</button>
+                    <button type="submit" form="quiz-contact-form" class="btn btn-primary btn-glow">Получить пробный урок!</button>
+                </div>
+            </div>
+            
+            <!-- Success Step -->
+            <div class="quiz-step success-step" data-step="success">
+                <div class="success-icon">🎉</div>
+                <h3 class="success-title">Отлично, заявка успешно принята!</h3>
+                <p class="success-text">Менеджер школы ГРЕМИ уже обрабатывает ваши результаты теста. Мы свяжемся с вами по телефону в течение 30 минут, чтобы согласовать дату и время бесплатного пробного урока!</p>
+                <div class="success-summary-card">
+                    <h4>Ваши параметры обучения:</h4>
+                    <ul>
+                        <li><strong>Направление:</strong> <span id="summary-instrument">Вокал</span></li>
+                        <li><strong>Ваш уровень:</strong> <span id="summary-level">Абсолютный новичок</span></li>
+                        <li><strong>Ваша цель:</strong> <span id="summary-goal">Играть для души</span></li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary quiz-close">Вернуться на сайт</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIRECT BOOKING MODAL -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-card booking-card">
+            <button class="modal-close-btn booking-close" aria-label="Закрыть">&times;</button>
+            
+            <h3 class="booking-modal-title">Запись на занятие</h3>
+            <p class="booking-modal-descr">Оставьте ваши данные, мы перезвоним вам в течение 30 минут и подберем удобное время.</p>
+            
+            <form id="direct-booking-form" class="grem-form">
+                <input type="hidden" id="booking-subject" name="form_subject" value="Общая запись">
+                
+                <div class="form-group">
+                    <label for="booking-name">Ваше имя</label>
+                    <input type="text" id="booking-name" name="name" placeholder="Как к вам обращаться?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="booking-phone">Номер телефона</label>
+                    <input type="tel" id="booking-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="booking-direction">Направление обучения</label>
+                    <select id="booking-direction" name="direction">
+                        <option value="Хочу определиться">Помочь определиться</option>
+                        <option value="Вокал">Вокал (эстрадный, рок, джаз)</option>
+                        <option value="Барабаны">Барабаны (ритм, драйв)</option>
+                        <option value="Гитара">Гитара (акустика, электро, бас)</option>
+                        <option value="Фортепиано">Фортепиано (классика, каверы)</option>
+                        <option value="Сольфеджио">Сольфеджио (теория, композиция)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block btn-glow">Отправить заявку</button>
+                <p class="form-disclaimer">Нажимая кнопку, вы соглашаетесь с нашей <a href="#" class="open-privacy">политикой конфиденциальности</a>.</p>
+            </form>
+            
+            <!-- Success Screen inside booking modal -->
+            <div class="booking-success-screen">
+                <div class="success-icon">✔️</div>
+                <h3>Вы записаны!</h3>
+                <p>Спасибо за обращение. Мы перезвоним вам в ближайшее время!</p>
+                <button class="btn btn-primary booking-close">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO OVERLAY MODAL -->
+    <div class="modal-overlay" id="video-modal">
+        <div class="modal-card video-card-modal">
+            <button class="modal-close-btn video-close" aria-label="Закрыть">&times;</button>
+            
+            <h3 class="video-modal-title">Whitney Houston - I Will Always Love You</h3>
+            <span class="video-modal-subtitle">Вокальный кавер от ученицы Алисы Ивановой</span>
+            
+            <div class="video-player-container-modal">
+                <!-- A highly stylized animated mockup of a video playing with audio frequencies -->
+                <div class="wave-visual-container">
+                    <div class="wave-bar bar-1"></div>
+                    <div class="wave-bar bar-2"></div>
+                    <div class="wave-bar bar-3"></div>
+                    <div class="wave-bar bar-4"></div>
+                    <div class="wave-bar bar-5"></div>
+                    <div class="wave-bar bar-6"></div>
+                    <div class="wave-bar bar-7"></div>
+                    <div class="wave-bar bar-8"></div>
+                    <div class="wave-bar bar-9"></div>
+                    <div class="wave-bar bar-10"></div>
+                </div>
+                <div class="mock-video-play-controls">
+                    <span class="time-elapsed">0:00</span>
+                    <div class="progress-bar-video">
+                        <div class="progress-bar-video-inner"></div>
+                    </div>
+                    <span class="time-total">4:12</span>
+                </div>
+                <button class="btn btn-primary play-pause-video-btn">Воспроизвести</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRIVACY MODAL -->
+    <div class="modal-overlay" id="privacy-modal">
+        <div class="modal-card privacy-card-modal">
+            <button class="modal-close-btn privacy-close" aria-label="Закрыть">&times;</button>
+            <h3>Политика конфиденциальности</h3>
+            <div class="privacy-text-content">
+                <p>Настоящая Политика конфиденциальности регулирует порядок сбора, использования и раскрытия персональных данных пользователей при использовании веб-сайта музыкальной школы ГРЕМИ.</p>
+                <h4>1. Сбор информации</h4>
+                <p>Мы осуществляем сбор персональной информации (такой как имя, адрес электронной почты, номер мобильного телефона), которую вы добровольно вводите в интерактивные формы обратной связи, квиз-тест и формы подписки на сайте.</p>
+                <h4>2. Использование данных</h4>
+                <p>Все собранные данные используются исключительно для оперативной обратной связи с клиентом, планирования расписания занятий в школе ГРЕМИ, отправки организационных уведомлений и рекламных спецпредложений.</p>
+                <h4>3. Безопасность и защита данных</h4>
+                <p>Мы гарантируем полную конфиденциальность ваших персональных данных. Данные никогда не будут переданы сторонним лицам или несанкционированным коммерческим организациям без вашего официального предварительного согласия.</p>
+            </div>
+            <button class="btn btn-primary privacy-close">Согласен</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <!-- Leaflet Map JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
