@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const role = card.querySelector('.teacher-role');
                     const statItems = card.querySelectorAll('.teacher-stats-mini span');
                     const desc = card.querySelector('.teacher-desc');
-                    const pref = card.querySelector('.teacher-pref');
                     const btn = card.querySelector('.open-booking-modal');
 
                     if (name) name.textContent = data.name;
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         statItems[1].textContent = data.ageText;
                     }
                     if (desc) desc.textContent = data.desc;
-                    if (pref) pref.innerHTML = `<strong>Предпочтения:</strong> ${data.pref}`;
                     if (btn) {
                         btn.textContent = `Записаться к ${data.name.split(' ')[0]}`;
                         btn.setAttribute('data-subject', data.subject);

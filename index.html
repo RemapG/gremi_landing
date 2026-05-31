@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=5.5">
+    <link rel="stylesheet" href="css/style.css?v=5.6">
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo.png?v=5.5" type="image/png">
@@ -298,6 +298,7 @@
                     <button class="tab-btn" data-filter="vocal">Вокал</button>
                     <button class="tab-btn" data-filter="guitar">Гитара</button>
                     <button class="tab-btn" data-filter="piano">Клавишные / Сольфеджио</button>
+                    <button class="tab-btn" data-filter="drums">Барабаны</button>
                 </div>
                 
                 <!-- Teachers Grid -->
@@ -317,7 +318,6 @@
                                 <span>Возраст учеников: от 15 лет</span>
                             </div>
                             <p class="teacher-desc">Строит занятия индивидуально: с закрытыми учениками работает через доверительный диалог, с открытыми — через движение и крик. Главные акценты — музыкальность и свобода самовыражения.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Джаз, Соул, Рок</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Алисе Егоровой">Записаться к Алисе</button>
                         </div>
                     </div>
@@ -336,7 +336,6 @@
                                 <span>Возраст учеников: от 7 лет</span>
                             </div>
                             <p class="teacher-desc">Обладает колоссальным опытом выступлений. Уделяет особое внимание ощущениям голосового аппарата, помогая раскрыть полный природный потенциал голоса без перегрузок.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Рок, Метал, Альтернатива</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Наталье Ивановой">Записаться к Наталье</button>
                         </div>
                     </div>
@@ -355,7 +354,6 @@
                                 <span>Возраст учеников: от 7 лет</span>
                             </div>
                             <p class="teacher-desc">Объясняет сложный материал просто и исключительно по делу. Помогает как новичкам быстро освоить базовые аккорды, так и продвинутым гитаристам овладеть сложной техникой соло.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Джаз, Фанк, Поп, Импровизация</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Павлу Федотову">Записаться к Павлу</button>
                         </div>
                     </div>
@@ -374,7 +372,6 @@
                                 <span>Возраст учеников: от 12 лет</span>
                             </div>
                             <p class="teacher-desc">Ставит во главу обучения удовольствие от игры и живой интерес к музыке. На занятиях царит легкая, поддерживающая атмосфера без скуки, но с четким фокусом на результат.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Рок, Поп, Хип-хоп</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Ивану Кулешову">Записаться к Ивану</button>
                         </div>
                     </div>
@@ -393,7 +390,6 @@
                                 <span>Возраст учеников: от 15 лет</span>
                             </div>
                             <p class="teacher-desc">Учит не просто зажимать лады, а понимать музыку — ритм, гармонию, учит импровизировать. Передает опыт работы на сцене и дает практические советы по концертам и звукозаписи.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Поп, Легкий рок, Акустика</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Екатерине Аникиной">Записаться к Екатерине</button>
                         </div>
                     </div>
@@ -412,7 +408,6 @@
                                 <span>Возраст учеников: от 7 лет</span>
                             </div>
                             <p class="teacher-desc">Простые и понятные занятия фортепиано с акцентом на доступность материала и личный прогресс каждого студента. Игра по нотам, исполнение классики, разбор любимых песен.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Классика, Поп, Саундтреки</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Илье Кактурскому">Записаться к Илье</button>
                         </div>
                     </div>
@@ -431,8 +426,25 @@
                                 <span>Возраст учеников: от 8 лет</span>
                             </div>
                             <p class="teacher-desc">Преподает игру на слух, джазовую импровизацию, нотную грамоту. Помогает освоить сонграйтинг, подбор аккомпанемента к вокалу, сольфеджио и игру в ансамбле.</p>
-                            <div class="teacher-pref"><strong>Предпочтения:</strong> Джаз, Классика, Импровизация, Поп</div>
                             <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Александру Фролову">Записаться к Александру</button>
+                        </div>
+                    </div>
+
+                    <!-- Daniil Stepanov (Drums) -->
+                    <div class="teacher-card" data-category="drums">
+                        <div class="teacher-image-wrapper">
+                            <div class="teacher-img-placeholder bg-drums">🥁</div>
+                            <span class="teacher-experience-badge">10 лет опыта</span>
+                        </div>
+                        <div class="teacher-info">
+                            <h3 class="teacher-name">Даниил Степанов</h3>
+                            <span class="teacher-role">Ударные, Барабаны</span>
+                            <div class="teacher-stats-mini">
+                                <span>Стаж преподавания: 5 лет</span>
+                                <span>Возраст учеников: от 7 лет</span>
+                            </div>
+                            <p class="teacher-desc">Поможет освоить базовые ритмы уже на первом занятии. Учит играть драйвовые грувы без лишней теории, работает над координацией, чувством времени и сценической уверенностью под любимые треки.</p>
+                            <button class="btn btn-secondary btn-sm open-booking-modal" data-subject="Запись к Даниилу Степанову">Записаться к Даниилу</button>
                         </div>
                     </div>
 
@@ -842,18 +854,18 @@
                 </div>
                 
             </div>
-            
-            <!-- FOOTER COPYRIGHT -->
-            <div class="footer-copyright-bar">
-                <div class="container copyright-container">
-                    <span>&copy; 2019-2026 Музыкальная школа ГРЕМИ. Все права защищены.</span>
-                    <div class="footer-links">
-                        <a href="#" class="open-privacy">Политика конфиденциальности</a>
-                        <a href="#">Договор оферты</a>
-                    </div>
+        </section>
+
+        <!-- FOOTER COPYRIGHT -->
+        <footer class="footer-copyright-bar">
+            <div class="container copyright-container">
+                <span>&copy; 2019-2026 Музыкальная школа ГРЕМИ. Все права защищены.</span>
+                <div class="footer-links">
+                    <a href="#" class="open-privacy">Политика конфиденциальности</a>
+                    <a href="#">Договор оферты</a>
                 </div>
             </div>
-        </section>
+        </footer>
 
     </main>
 

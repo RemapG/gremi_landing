@@ -1446,6 +1446,7 @@ a {
 .bg-vocal { background: radial-gradient(circle, rgba(255, 45, 70, 0.12) 0%, rgba(8, 8, 10, 0.6) 100%) !important; }
 .bg-guitar { background: radial-gradient(circle, rgba(0, 85, 255, 0.12) 0%, rgba(8, 8, 10, 0.6) 100%) !important; }
 .bg-piano { background: radial-gradient(circle, rgba(255, 45, 70, 0.12) 0%, rgba(8, 8, 10, 0.6) 100%) !important; }
+.bg-drums { background: radial-gradient(circle, rgba(255, 110, 0, 0.12) 0%, rgba(8, 8, 10, 0.6) 100%) !important; }
 
 .teacher-experience-badge {
     position: absolute;
@@ -3494,24 +3495,27 @@ a {
 }
 
 /* Solid premium black footer copyright bar and links */
-.contacts-section .footer-copyright-bar {
+.footer-copyright-bar {
     background-color: #08080a !important;
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-    margin-top: 40px; /* Breathe between cards and footer copyright bar */
+    margin-top: 0 !important; /* Touch directly against the bottom edge of contacts section */
+    padding: 32px 0 !important;
+    position: relative;
+    z-index: 10;
 }
 
-.contacts-section .copyright-container {
+.copyright-container {
     color: #a1a1aa !important;
     font-weight: 500;
 }
 
-.contacts-section .footer-links a {
+.footer-links a {
     color: #a1a1aa !important;
     font-weight: 600;
     transition: var(--transition-fast);
 }
 
-.contacts-section .footer-links a:hover {
+.footer-links a:hover {
     color: var(--accent-neon) !important; /* Hot neon pink hover glow */
 }
 
