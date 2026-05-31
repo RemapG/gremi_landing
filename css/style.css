@@ -3672,28 +3672,87 @@ a {
    MOBILE VIEWPORT & LAYOUT ALIGNMENT FIXES (SMARTPHONES)
    ========================================================================== */
 
-/* Force main header to pin perfectly to top of screen and scale slimly on mobile */
-@media screen and (max-width: 960px) {
-    .main-header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
+/* Strict prevention of horizontal scroll/overflow on mobile devices */
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
         width: 100% !important;
-        z-index: 9999 !important;
     }
 }
 
+/* Force modal overlay to be scrollable and overlay on top of everything on mobile */
+.modal-overlay {
+    z-index: 10000 !important; /* Ensure modals cover the bottom/top headers completely */
+}
+
 @media screen and (max-width: 640px) {
+    /* Prevent modal cutoff on small screens by allowing overlay scrolling */
+    .modal-overlay {
+        display: block !important;
+        overflow-y: auto !important;
+        padding: 32px 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .modal-card {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        top: 0 !important;
+        transform: translateY(10px) scale(0.98) !important;
+        padding: 32px 20px 24px 20px !important; /* Slimmer padding for mobile form */
+    }
+
+    .modal-overlay.active .modal-card {
+        transform: translateY(0) scale(1) !important;
+    }
+
+    .modal-close-btn {
+        top: 12px !important;
+        right: 12px !important;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 14px !important;
+    }
+
+    .booking-modal-descr {
+        margin-bottom: 20px !important;
+        font-size: 13px !important;
+    }
+
+    .grem-form {
+        gap: 14px !important;
+    }
+
+    .form-group input, 
+    .form-group select {
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+    }
+
+    /* --- PREMIUM BOTTOM NAVIGATION FOR SMARTPHONES --- */
     :root {
         --header-height: 56px !important; /* Slimmer header on mobile to fit notch and save screen height */
     }
 
     .main-header {
-        height: var(--header-height) !important;
+        position: fixed !important;
+        top: auto !important;
+        bottom: 0 !important; /* Pinned perfectly at the bottom! */
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) !important;
+        padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+        border-bottom: none !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+        background-color: rgba(8, 8, 10, 0.92) !important; /* Dark solid premium bar */
+        z-index: 9999 !important;
     }
 
     .main-header.scrolled {
-        height: var(--header-height) !important;
+        height: calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) !important;
+        background-color: rgba(8, 8, 10, 0.96) !important;
     }
 
     .header-container {
@@ -3742,9 +3801,23 @@ a {
         height: 2px !important;
     }
 
+    /* Shift the mobile menu drawer to open from the bottom */
+    .mobile-drawer {
+        top: 0 !important;
+        bottom: calc(var(--header-height) + env(safe-area-inset-bottom, 0px)) !important;
+        height: calc(100vh - var(--header-height) - env(safe-area-inset-bottom, 0px)) !important;
+        padding: 40px 24px !important;
+        right: -100% !important;
+        left: auto !important;
+    }
+
+    .mobile-drawer.active {
+        right: 0 !important;
+    }
+
     /* --- HERO MOBILE COMPACTNESS & WHITE SPACE REDUCTION --- */
     .hero-section {
-        padding-top: calc(var(--header-height) + 24px) !important; /* Reduce whitespace drastically to align beautifully */
+        padding-top: 32px !important; /* Beautiful space at the top since header is now at the bottom! */
         padding-bottom: 60px !important;
     }
 
