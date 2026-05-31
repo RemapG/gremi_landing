@@ -1333,17 +1333,39 @@ a {
 /* Responsive media queries for Courses list layout */
 @media screen and (max-width: 768px) {
     .course-card {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: flex-start;
-        gap: 16px;
-        padding: 32px 24px;
+        gap: 12px 16px;
+        padding: 24px 20px;
     }
     .course-icon {
-        margin-bottom: 8px !important;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        flex-shrink: 0;
+        margin: 0 !important;
+    }
+    .course-info {
+        flex: 1 1 calc(100% - 64px);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .course-title {
+        font-size: 18px;
+        margin: 0 !important;
+    }
+    .course-text {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 !important;
     }
     .course-link {
-        margin-top: 12px !important;
+        flex: 1 0 100%;
+        margin-top: 4px !important;
         width: auto;
+        justify-content: flex-start;
     }
 }
 
