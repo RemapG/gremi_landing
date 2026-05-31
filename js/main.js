@@ -227,6 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.textContent = data.btnText;
                         btn.setAttribute('data-subject', `Тариф ${data.name}`);
                     }
+                } else {
+                    card.remove(); // Dynamically remove extra cards not present in the config
                 }
             });
         }
@@ -248,6 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (avatar) avatar.textContent = data.avatarLetters;
                     if (authorName) authorName.textContent = data.name;
                     if (details) details.textContent = data.details;
+                } else {
+                    slide.remove(); // Dynamically remove extra review slides not present in the config
                 }
             });
         }

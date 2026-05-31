@@ -239,16 +239,16 @@ const GREMI_CONFIG = {
         ],
         // Настройки видеоплеера в блоке «О нас»
         video: {
-            songTitle: "Whitney Houston — I Will Always Love You",
-            songSubtitle: "Вокальный кавер от ученицы Алисы Ивановой",
-            thumbnailUrl: "assets/images/hero_instrument_banner.png", // Ваша картинка-обложка плеера
+            songTitle: "Foo Fighters — This Is A Call",
+            songSubtitle: "Гитарный кавер от ученицы Ангелины",
+            thumbnailUrl: "assets/images/uchen_preview.jpg", // Ваша картинка-обложка плеера
             
             // ССЫЛКА НА РЕАЛЬНОЕ ВИДЕО:
             // Если вы используете YouTube, вставьте URL встраивания (embed URL).
             // Пример: "https://www.youtube.com/embed/fJ9rUzIMcZQ?autoplay=1"
             // Если вы используете локальный mp4-файл, укажите его путь, например: "assets/video/cover.mp4"
-            videoUrl: "https://www.youtube.com/embed/fJ9rUzIMcZQ?autoplay=1",
-            isVideoYouTube: true // true, если это YouTube iframe, false если это ссылка на mp4 файл
+            videoUrl: "assets/video/uchen.mp4",
+            isVideoYouTube: false // true, если это YouTube iframe, false если это ссылка на mp4 файл
         }
     },
 
@@ -282,6 +282,14 @@ const GREMI_CONFIG = {
                 price: "14 800 ₽",
                 desc: "Абонемент на 8 индивидуальных занятий. Для тех, кто настроен серьезно: поставим базовую технику, разберем 3-4 песни и подготовимся к выступлению на джеме.",
                 btnText: "Выбрать этот тариф",
+                isPopular: false
+            },
+            {
+                badge: "Прогресс",
+                name: "Муз Интенсив",
+                price: "18 900 ₽",
+                desc: "Лучший выбор для тех, кто серьезно настроен на осязаемый результат: быстрый рост навыков игры, уверенный вокал и подготовка к сцене.",
+                btnText: "Заказать абонемент",
                 isPopular: false
             }
         ]
