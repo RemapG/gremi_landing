@@ -2983,6 +2983,15 @@ a {
     border: var(--border-soft);
 }
 
+.video-player-container-modal.has-real-video {
+    height: auto;
+    aspect-ratio: 16/9;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
 /* Visualizer equalizer bars */
 .wave-visual-container {
     display: flex;

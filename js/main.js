@@ -915,6 +915,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.mockPlayerBackupHTML = modalContainer.innerHTML;
                     }
                     
+                    modalContainer.classList.add('has-real-video');
                     if (GREMI_CONFIG.about.video.isVideoYouTube) {
                         modalContainer.innerHTML = `
                             <iframe src="${GREMI_CONFIG.about.video.videoUrl}" 
@@ -969,6 +970,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Clear real video player to stop audio
                         const modalContainer = document.querySelector('#video-modal .video-player-container-modal');
                         if (modalContainer && typeof GREMI_CONFIG !== 'undefined' && GREMI_CONFIG.about.video.videoUrl) {
+                            modalContainer.classList.remove('has-real-video');
                             modalContainer.innerHTML = window.mockPlayerBackupHTML || '';
                         }
                     }
