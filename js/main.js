@@ -311,6 +311,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Network error attempting to send to Telegram:', error);
         }
+
+        // Trigger Yandex Metrika conversion goal
+        if (typeof ym === 'function') {
+            try {
+                ym(111971454, 'reachGoal', 'lead_form_submit');
+            } catch (e) {
+                console.warn('Metrika goal trigger:', e);
+            }
+        }
     };
 
     /* ==========================================
